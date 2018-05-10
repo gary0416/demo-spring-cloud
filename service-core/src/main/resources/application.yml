@@ -1,0 +1,10 @@
+eureka:
+  client:
+    serviceUrl:
+      # 因为启用了basic认证
+      defaultZone: http://gary:123456@localhost:7070/eureka/
+server:
+  port: 8081
+spring:
+  application:
+    name: service-core
