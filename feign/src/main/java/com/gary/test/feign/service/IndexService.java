@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author ztb
  * 2018-05-10 22:11
  */
-@FeignClient(value = "service-core")
+@FeignClient(value = "service-core", fallback = IndexServiceFallback.class)
 public interface IndexService {
 
 	/**
