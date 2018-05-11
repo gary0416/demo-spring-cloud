@@ -1,0 +1,25 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://gary:123456@localhost:7070/eureka/
+server:
+  port: 8481
+spring:
+  application:
+    name: service-zuul
+  profiles:
+    active: dev
+zuul:
+  # 例外
+  ignoredPatterns: /**/admin/**
+  routes:
+    api-core:
+      path: /api-core/**
+      # 默认strip-prefix就是true,会把/api-core/前缀去掉
+      serviceId: service-core
+    api-user:
+      path: /api-user/**
+      serviceId: service-user
+logging:
+  level:
+    com.gary: debug

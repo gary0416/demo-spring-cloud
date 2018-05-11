@@ -4,3 +4,4 @@
 - rest+ribbon
 - feign
 - hystrix & dashboard
+- zuul

@@ -1,0 +1,4 @@
+eureka:
+  client:
+    # 默认为30秒
+    registry-fetch-interval-seconds: 30
