@@ -7,3 +7,11 @@ server:
 spring:
   application:
     name: service-rest-ribbon
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            # 默认1s,在com.netflix.hystrix.HystrixCommandProperties的default_executionTimeoutInMilliseconds属性
+            timeoutInMilliseconds: 3000

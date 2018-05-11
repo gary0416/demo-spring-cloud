@@ -15,3 +15,6 @@ ribbon 已经默认实现了这些配置bean：
 
 ## 例子
 启动eureka server,再起两个service core,此时可以看到SERVICE-CORE的Availability Zones有2个,启动本项目,访问http://localhost:8281/getDataFromCore多次,可以看到每次通过负载均衡,在切换访问不同的service实例.
+
+## 断路器
+关掉service core,再请求http://localhost:8281/getDataFromCore,可以看到返回预设值
