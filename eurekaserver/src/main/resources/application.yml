@@ -1,9 +1,9 @@
+spring:
+  profiles:
+    active: dev
 server:
   port: 7070
-
 eureka:
-  instance:
-    hostname: localhost
   client:
     # 通过下面的两个false来表明自己是一个eureka server
     registerWithEureka: false

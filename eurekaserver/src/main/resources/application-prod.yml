@@ -1,0 +1,9 @@
+eureka:
+  instance:
+    hostname: localhost
+  server:
+    # Eureka自我保护机制,当其注册表里服务因为网络或其他原因出现故障而关停时,不会剔除服务注册,而是等待其修复
+    # 这是AP的一种实现.可以设为false(默认true),关闭自我保护
+    enableSelfPreservation: true
+    # 清理(client到达lease-expiration-duration-in-seconds后)间隔,单位毫秒,默认60*1000
+    evictionIntervalTimerInMs: 600000
