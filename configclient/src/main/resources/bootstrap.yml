@@ -3,8 +3,16 @@ spring:
     name: config-client
   cloud:
     config:
-      uri: http://localhost:7060/
-      profile: dev
+#      uri: http://localhost:7060/
 #      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        # 上eureka后就不在uri里写死了,直接写名.注意是service-id不是serviceId
+        service-id: config-server
 server:
   port: 7061
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://gary:123456@localhost:7070/eureka/
