@@ -1,5 +1,6 @@
 # test spring cloud
 ## keywords:
+- config
 - eureka server
 - rest+ribbon
 - feign

@@ -1,0 +1,13 @@
+server:
+  port: 7060
+spring:
+  # 默认是从git取,改为使用本地
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        default-profile: dev
+        native:
+          # 配置文件目录
+          search-locations: classpath:/config
