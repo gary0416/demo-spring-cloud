@@ -27,6 +27,7 @@
         <module>zuul</module>
         <module>configserver</module>
         <module>configclient</module>
+        <module>hystrix-turbine</module>
     </modules>
 
     <properties>
@@ -39,7 +40,7 @@
             其它都不支持2.0.x,所以用Finchley
         -->
         <spring-cloud.version>Finchley.RC1</spring-cloud.version>
-        <netflix.version>2.0.0.M8</netflix.version>
+        <netflix.version>2.0.0.RC1</netflix.version>
     </properties>
 
     <!-- 统一管理版本号,child里可省略版本号 -->
@@ -81,6 +82,11 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+                <version>${netflix.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
                 <version>${netflix.version}</version>
             </dependency>
             <dependency>

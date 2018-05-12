@@ -20,4 +20,4 @@ ribbon 已经默认实现了这些配置bean：
 关掉service core,再请求http://localhost:8281/getDataFromCore,可以看到返回预设值
 
 ## Hystrix Dashboard
-打开http://localhost:8281/hystrix,输入http://localhost:8281/hystrix.stream,点monitor stream,
+打开http://localhost:8281/hystrix,输入http://localhost:8281/actuator/hystrix.stream,点monitor stream,

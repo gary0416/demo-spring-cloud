@@ -12,4 +12,4 @@ Feign是一个声明式的伪Http客户端，它使得写Http客户端变得更�
 启动eureka server,再起两个service core,此时可以看到SERVICE-CORE的Availability Zones有2个,启动本项目,访问http://localhost:8381/getDataFromCore多次,可以看到每次通过负载均衡,在切换访问不同的service实例.
 
 ## Hystrix Dashboard
-打开http://localhost:8381/hystrix,输入http://localhost:8381/hystrix.stream,点monitor stream,
+打开http://localhost:8381/hystrix,输入http://localhost:8381/actuator/hystrix.stream,点monitor stream,
