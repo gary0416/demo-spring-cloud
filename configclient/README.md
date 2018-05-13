@@ -12,6 +12,7 @@
 
 ### 手动 
 启动eureka server,config server,config client,访问http://localhost:7061/getTestKey,可以看到值是testVal.
+打开http://localhost:15672/,可以看到topic为springCloudBus.
 修改config server里,配置文件中的testKey值.因为不是git版,所以只能重启config server.
 主动触发重新加载配置,post方式访问http://localhost:7061/actuator/bus-refresh.
 此时console可以看到会立即Refreshing,然后在eureka里状态改为DOWN,之后UP.稍等后再访问getTestKey可以看到已变为新值.
