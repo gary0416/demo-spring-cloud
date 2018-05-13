@@ -10,6 +10,19 @@ spring:
         enabled: true
         # 上eureka后就不在uri里写死了,直接写名.注意是service-id不是serviceId
         service-id: config-server
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: gary
+    password: 123456
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - 'health'
+          - 'info'
+          - 'bus-refresh'
 server:
   port: 7061
 eureka:

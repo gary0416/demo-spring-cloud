@@ -6,3 +6,4 @@
 - feign
 - hystrix & dashboard
 - zuul
+- bus

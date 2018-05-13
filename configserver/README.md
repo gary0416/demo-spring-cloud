@@ -21,3 +21,13 @@
 2018-05-12 16:22:49.424  INFO 7416 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{name}/{profile}/**],methods=[GET],params=[useDefaultLabel]}" onto public java.lang.String org.springframework.cloud.config.server.resource.ResourceController.retrieve(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,boolean) throws java.io.IOException
 ```
 接下来看config-client项目
+
+## bus-refresh
+client众多,都手动太麻烦,可通过server里的refresh解决.
+
+启动eureka server,config server,config client,post方式访问http://localhost:7060/actuator/bus-refresh.
+通过console可以看到server和client都已触发.
+
+如果想灰度,可以http://localhost:7060/actuator/bus-refresh/config-client:\*\*,
+表示名字为config-client的所有service,注意这里是/actuator/bus-refresh/{destination}格式,
+也不是网上大部分或官网写的/bus/refresh?destination=customers:\*\*.
